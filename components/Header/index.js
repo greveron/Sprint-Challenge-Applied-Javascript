@@ -19,29 +19,24 @@ function Header() {
     const h1 = document.createElement('h1');
     const temp = document.createElement('span')
 
-    
+    //Create Structure
     header.appendChild(day)
     header.appendChild(h1)
     header.appendChild(temp)
 
+    //Call Class
     header.classList.add("header")
     day.classList.add("date")
     temp.classList.add("temp")
 
-    //add context
+    //Add Context
     day.innerHTML = "SMARCH 28, 2019"
     h1.innerHTML = "Lambda Times"
     temp.innerHTML = "98°"
 
-    
-   
-
-    
-
-
     return header
 }
-
+//Adding
 const headerContainer = document.querySelector('.header-container')
 
 headerContainer.appendChild(Header())

@@ -10,21 +10,23 @@
 
 
 const receiver = document.querySelector(".topics")
+
+//Axios
 axios.get("https://lambda-times-backend.herokuapp.com/topics")
-.then((obj) => {
-    console.log(obj)
-    obj.data.topics.forEach(topic =>{
-        const tab = document.createElement("div")
-        tab.classList.add("tab")
-        tab.textContent = topic
-        receiver.appendChild(tab)
+    .then((obj) => {
+        console.log(obj)
+        obj.data.topics.forEach(topic => {
+            const tab = document.createElement("div")
+            tab.classList.add("tab")
+            tab.textContent = topic
+            receiver.appendChild(tab)
 
+        })
     })
-})
-        
-    
 
-   
+
+
+
 
 
 
