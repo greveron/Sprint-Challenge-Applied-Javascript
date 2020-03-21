@@ -9,4 +9,34 @@
 //  </div >
 // And add it to the DOM in the .header-container component
 
-function Header() {}
+
+
+//create machine
+function Header() {
+
+    const header = document.createElement('div');
+    const day = document.createElement('span');
+    const h1 = document.createElement('h1');
+    const temp = document.createElement('span')
+
+    //Create Structure
+    header.appendChild(day)
+    header.appendChild(h1)
+    header.appendChild(temp)
+
+    //Call Class
+    header.classList.add("header")
+    day.classList.add("date")
+    temp.classList.add("temp")
+
+    //Add Context
+    day.innerHTML = "SMARCH 28, 2019"
+    h1.innerHTML = "Lambda Times"
+    temp.innerHTML = "98°"
+
+    return header
+}
+//Adding
+const headerContainer = document.querySelector('.header-container')
+
+headerContainer.appendChild(Header())
